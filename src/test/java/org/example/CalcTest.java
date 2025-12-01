@@ -23,4 +23,19 @@ public class CalcTest {
     public void test3() {
         assertThat(Calc.run("2 + 2")).isEqualTo(4);
     }
+        @Test
+        @DisplayName("2 + 3 = 5")
+        public void test4() {
+            assertThat(Calc.run("2 + 3")).isEqualTo(5);
+        }
+            @Test
+            @DisplayName("1000 + 200 = 1200")
+            public void test5() {
+                assertThat(Calc.run("1000 + 200")).isEqualTo(1200);
+            }
+    @Test
+    @DisplayName("50 - 30 = 20")
+    public void test6() {
+        assertThat(Calc.run("50 - 30")).isEqualTo(20);
+    }
 }
