@@ -23,6 +23,7 @@ public class CalcTest {
     public void test3() {
         assertThat(Calc.run("2 + 2")).isEqualTo(4);
     }
+<<<<<<< HEAD
         @Test
         @DisplayName("2 + 3 = 5")
         public void test4() {
@@ -38,4 +39,3 @@ public class CalcTest {
     public void test6() {
         assertThat(Calc.run("50 - 30")).isEqualTo(20);
     }
-}
