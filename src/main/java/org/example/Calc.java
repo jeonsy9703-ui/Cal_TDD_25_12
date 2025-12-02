@@ -4,18 +4,23 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Calc {
+
     public static int run(String exp) {
 
+        // 괄호 제거
+        exp = stripOuterBrackets(exp);
+
+        // 그냥 숫자만 들어올 경우 바로 리턴
         if (!exp.contains(" ")) {
             return Integer.parseInt(exp);
         }
 
-        exp = exp.replace("- ", "+ -");
+        boolean needToMulti = exp.contains(" * ");
+        boolean needToPlus = exp.contains(" + ") || exp.contains(" - ");
 
-        boolean needToMulti = exp.contains("*");
-        boolean needToPlus = exp.contains("+");
         boolean needToCompound = needToPlus && needToMulti;
 
+        exp = exp.replace("- ", "+ -");
 
         if (needToCompound) {
             String[] bits = exp.split(" \\+ ");
@@ -52,4 +57,13 @@ public class Calc {
 
         throw new RuntimeException("해석 불가 : 올바른 계산식이 아님");
     }
+
+    private static String stripOuterBrackets(String exp) {
+        if (exp.charAt(0) == '(' && exp.charAt(exp.length() - 1) == ')') {
+            exp = exp.substring(1, exp.length() - 1);
+        }
+        return exp;
+    }
+
+
 }
