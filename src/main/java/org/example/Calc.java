@@ -17,12 +17,32 @@ public class Calc {
 
         boolean needToMulti = exp.contains(" * ");
         boolean needToPlus = exp.contains(" + ") || exp.contains(" - ");
-
+        boolean needToSplit = exp.contains("(") || exp.contains(")");
         boolean needToCompound = needToPlus && needToMulti;
 
         exp = exp.replace("- ", "+ -");
 
-        if (needToCompound) {
+        if (needToSplit) {
+            int bracketsCount = 0;
+            int splitPointIndex = -1;
+
+            for (int i = 0; i < exp.length(); i++) {
+                if (exp.charAt(i) == '(') {
+                    bracketsCount++;
+                } else if (exp.charAt(i) == ')') {
+                    bracketsCount--;
+                }
+                if (bracketsCount == 0) {
+                    splitPointIndex = i;
+                    break;
+                }
+            }
+            String firstExp = exp.substring(0, splitPointIndex + 1);
+            String secondExp = exp.substring(splitPointIndex + 4);
+
+            return Calc.run(firstExp) + Calc.run(secondExp);
+
+        } else if (needToCompound) {
             String[] bits = exp.split(" \\+ ");
 
             String newExp = Arrays.stream(bits)
@@ -54,6 +74,7 @@ public class Calc {
             return sum;
         }
 
+
         throw new RuntimeException("해석 불가 : 올바른 계산식이 아님");
     }
 
@@ -64,10 +85,9 @@ public class Calc {
         while (exp.charAt(outerBracketsCount) == '(' && exp.charAt(exp.length() - 1 - outerBracketsCount) == ')') {
             outerBracketsCount++;
         }
+
         if (outerBracketsCount == 0) return exp;
 
         return exp.substring(outerBracketsCount, exp.length() - outerBracketsCount);
     }
 }
-
-
