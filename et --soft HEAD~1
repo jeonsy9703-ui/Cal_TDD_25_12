@@ -1,0 +1,72 @@
+[33mcommit a06e94b17531727c4ed4bf0d7c86bd902adb34c8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: jeonsy9703-ui <jeonsy9703@gmail.com>
+Date:   Tue Dec 2 15:16:21 2025 +0900
+
+    - 빼기 버그 수정
+
+[33mcommit e8a4a02b6b46e60e2f969acae2b385284bf7e8d6[m
+Author: jeonsy9703-ui <jeonsy9703@gmail.com>
+Date:   Tue Dec 2 15:13:43 2025 +0900
+
+    10 * 20 + 10 + 5 * 2
+
+[33mcommit 933dfdf87d5bac5f0cc81c3dcadc8a62b331d1dc[m
+Author: jeonsy9703-ui <jeonsy9703@gmail.com>
+Date:   Tue Dec 2 13:59:10 2025 +0900
+
+    10 * 20 + 10 + 5 * 2
+
+[33mcommit 2379676789380a0ccba72541f94dae3f81b4d5bc[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Tue Dec 2 13:48:23 2025 +0900
+
+    20 + 10 + 5 * 2
+
+[33mcommit b0cd5a55335497b6fbbaf87525f1df7080d2e30f[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Tue Dec 2 13:17:03 2025 +0900
+
+    10 + 5 * 2
+
+[33mcommit e8cbb8356e972832af386d4f1f9f9dda7b72d2ff[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Tue Dec 2 13:04:33 2025 +0900
+
+    10 * 10 * 10
+
+[33mcommit ab5c0566607e4fe3494ab3a5f1783cd6dca6930e[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Mon Dec 1 17:22:03 2025 +0900
+
+    2 - 1
+
+[33mcommit 07308524fbdd5d65c34813bd009b9493d200af01[m
+Merge: 5f15843 1213afa
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Mon Dec 1 17:17:23 2025 +0900
+
+    2 - 1
+
+[33mcommit 5f15843b9b8d64f16352d90ed578e8710d06149d[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Mon Dec 1 17:05:13 2025 +0900
+
+    2 - 1
+
+[33mcommit 88e976ce0fb96d2cd74e8401fa571d4a1c3bcd0a[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Mon Dec 1 15:33:12 2025 +0900
+
+    TDD 다항식 리터, 프로젝트 시작
+
+[33mcommit 1213afaffb63d9b86e23670f1fcb5755f93b4047[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Mon Dec 1 15:33:12 2025 +0900
+
+    1 + 1
+
+[33mcommit 5055378b97b89add14eb6fd5004dd5aeb59a9d20[m
+Author: jeonsy9703-ui <jeonsy9703@gamil.com>
+Date:   Mon Dec 1 14:22:20 2025 +0900
+
+    TDD 다항식 계산기, 프로젝트 세팅

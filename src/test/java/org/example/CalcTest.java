@@ -102,4 +102,9 @@ public class CalcTest {
     public void test16() {
         assertThat(Calc.run("10 + 5 * 2")).isEqualTo(20);
     }
+    @Test
+    @DisplayName("10 * 20 + 10 + 5 * 2")
+    public void test17() {
+        assertThat(Calc.run("10 * 20 + 10 + 5 * 2")).isEqualTo(220);
+    }
 }
