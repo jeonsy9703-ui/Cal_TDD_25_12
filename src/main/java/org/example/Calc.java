@@ -54,16 +54,20 @@ public class Calc {
             return sum;
         }
 
-
         throw new RuntimeException("해석 불가 : 올바른 계산식이 아님");
     }
 
     private static String stripOuterBrackets(String exp) {
-        if (exp.charAt(0) == '(' && exp.charAt(exp.length() - 1) == ')') {
-            exp = exp.substring(1, exp.length() - 1);
+
+        int outerBracketsCount = 0;
+
+        while (exp.charAt(outerBracketsCount) == '(' && exp.charAt(exp.length() - 1 - outerBracketsCount) == ')') {
+            outerBracketsCount++;
         }
-        return exp;
+        if (outerBracketsCount == 0) return exp;
+
+        return exp.substring(outerBracketsCount, exp.length() - outerBracketsCount);
     }
-
-
 }
+
+
