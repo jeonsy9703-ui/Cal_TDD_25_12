@@ -10,12 +10,12 @@ public class Calc {
             return Integer.parseInt(exp);
         }
 
+        exp = exp.replace("- ", "+ -");
+
         boolean needToMulti = exp.contains("*");
         boolean needToPlus = exp.contains("+");
-
         boolean needToCompound = needToPlus && needToMulti;
 
-        exp = exp.replace("- ", "+ -");
 
         if (needToCompound) {
             String[] bits = exp.split(" \\+ ");
